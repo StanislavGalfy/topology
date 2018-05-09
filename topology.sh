@@ -68,7 +68,7 @@ qemu-system-i386 -cdrom ../mainline/image.iso \
 	-monitor unix:/tmp/monitor-helenosA,server,nowait \
 	-name HelenOS_A &
 
-if [ 1 -eq 0 ]; then
+#if [ 1 -eq 0 ]; then
 
 qemu-system-i386 -cdrom ../mainline/image.iso \
 	-net nic,vlan=21,macaddr=ca:fe:ba:be:02:01,model=rtl8139 \
@@ -92,7 +92,7 @@ qemu-system-i386 -cdrom ../mainline/image.iso \
 	-monitor unix:/tmp/monitor-helenosA2,server,nowait \
 	-name HelenOS_A2 &
 
-fi
+#fi
 
 ##################################################################
 
@@ -111,7 +111,7 @@ qemu-system-i386 coreB.img \
 	-monitor unix:/tmp/monitor-coreB,server,nowait \
 	-name Core_B &
 
-if [ 1 -eq 0 ]; then
+#if [ 1 -eq 0 ]; then
 
 qemu-system-i386 -cdrom ../mainline/image.iso \
 	-net nic,vlan=51,macaddr=ca:fe:ba:be:05:01,model=rtl8139 \
@@ -124,7 +124,7 @@ qemu-system-i386 -cdrom ../mainline/image.iso \
 	-monitor unix:/tmp/monitor-helenosB1,server,nowait \
 	-name HelenOS_B1 &
 
-fi
+#fi
 
 qemu-system-i386 coreB2.img \
 	-net nic,vlan=61,macaddr=ca:fe:ba:be:06:01,model=rtl8139 \
@@ -154,7 +154,7 @@ qemu-system-i386 -cdrom ../mainline/image.iso \
 	-monitor unix:/tmp/monitor-helenosC,server,nowait \
 	-name HelenOS_C &
 
-if [ 1 -eq 0 ]; then
+#if [ 1 -eq 0 ]; then
 
 qemu-system-i386 -cdrom ../mainline/image.iso \
 	-net nic,vlan=81,macaddr=ca:fe:ba:be:08:01,model=rtl8139 \
@@ -167,7 +167,7 @@ qemu-system-i386 -cdrom ../mainline/image.iso \
 	-monitor unix:/tmp/monitor-helenosC1,server,nowait \
 	-name HelenOS_C1 &
 
-fi
+#fi
 
 qemu-system-i386 coreC2.img \
 	-net nic,vlan=91,macaddr=ca:fe:ba:be:09:01 \
